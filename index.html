@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solar System View</title>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <style>
+    body { margin: 0; overflow: hidden; }
+  </style>
+</head>
+<body>
+  <a-scene>
+    <!-- Camera looking down from above -->
+    <a-entity id="rig" position="0 500 0" rotation="-90 0 0">
+      <a-entity id="camera" camera look-controls-enabled="false" position="0 0 0"></a-entity>
+    </a-entity>
+
+    <!-- Sun -->
+    <a-sphere src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Map_of_the_full_sun.jpg/1200px-Map_of_the_full_sun.jpg"
+              radius="50" segments-height="64" segments-width="64"></a-sphere>
+
+    <!-- Mercury -->
+    <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 1000;">
+      <a-sphere src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/09/p/i/a/1/PIA17386.jpg"
+                radius="1.14" position="-60 0 0"
+                segments-height="64" segments-width="64"
+                animation="property: rotation; to: 0 -360 0; loop: true; dur: 2000;">
+      </a-sphere>
+    </a-entity>
+
+    <!-- Venus -->
+    <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 3000;">
+      <a-sphere src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Cylindrical_Map_of_Venus.jpg/2560px-Cylindrical_Map_of_Venus.jpg"
+                radius="2.85" position="-85 0 0"
+                segments-height="64" segments-width="64"
+                animation="property: rotation; to: 0 -360 0; loop: true; dur: 4000;">
+      </a-sphere>
+    </a-entity>
+
+    <!-- Earth -->
+    <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;">
+      <a-sphere src="https://www.generic-mapping-tools.org/remote-datasets/_images/GMT_earth_daynight.jpg"
+                radius="3" position="-115 0 0"
+                segments-height="64" segments-width="64"
+                animation="property: rotation; to: 0 -360 0; loop: true; dur: 3000;">
+      </a-sphere>
+    </a-entity>
+
+    <!-- Mars -->
+    <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 6000;">
+      <a-sphere src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKW2FrNOqg9cbDuuCdkAIvF1Yw3ZnSseorEw&s"
+                radius="1.59" position="-145 0 0"
+                segments-height="64" segments-width="64"
+                animation="property: rotation; to: 0 -360 0; loop: true; dur: 3500;">
+      </a-sphere>
+    </a-entity>
+
+    <!-- Jupiter -->
+    <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 10000;">
+      <a-sphere src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXPDFPjtsLJ2bSPDuBldjVUQlu3JkOBRbxng&s"
+                radius="33.6" position="-210 0 0"
+                segments-height="64" segments-width="64"
+                animation="property: rotation; to: 0 -360 0; loop: true; dur: 2500;">
+      </a-sphere>
+    </a-entity>
+
+    <!-- Saturn -->
+    <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 12000;">
+      <a-sphere src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Solarsystemscope_texture_8k_saturn.jpg"
+                radius="28.35" position="-285 0 0"
+                segments-height="64" segments-width="64"
+                animation="property: rotation; to: 0 -360 0; loop: true; dur: 2700;">
+      </a-sphere>
+    </a-entity>
+
+    <!-- Uranus -->
+    <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 10000;">
+      <a-sphere src="https://supernova.eso.org/static/archives/exhibitionimages/large/NEP0VTT1-CC-10x5k.jpg"
+                radius="12.03" position="-345 0 0"
+                segments-height="64" segments-width="64"
+                animation="property: rotation; to: 0 -360 0; loop: true; dur: 3200;">
+      </a-sphere>
+    </a-entity>
+
+    <!-- Sky -->
+    <a-sky color="lightyellow"></a-sky>
+  </a-scene>
+</body>
+</html>
